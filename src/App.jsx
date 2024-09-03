@@ -89,7 +89,7 @@ function App() {
   }
 
   return (
-    <div className=" flex items-center justify-center bg-bgimg h-screen sm:w-screen bg-no-repeat bg-cover flex-col bg-center">
+    <div className=" flex items-center justify-center bg-bgimg sm:h-screen sm:w-screen bg-no-repeat bg-cover flex-col bg-center bg-fixed">
       <div className="max-w-1/2 h-fit py-12 rounded-xl backdrop-blur bg-[#ffffff76]">
         <Search
           getWeather={getWeather}
