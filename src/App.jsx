@@ -89,7 +89,7 @@ function App() {
   }
 
   return (
-    <div className=" flex items-center justify-center bg-bgimg w-screen h-screen bg-no-repeat bg-cover">
+    <div className=" flex items-center justify-center bg-bgimg w-screen h-screen bg-no-repeat bg-cover flex-col">
       <div className="max-w-1/2 h-fit py-12 rounded-xl backdrop-blur bg-[#ffffff76]">
         <Search
           getWeather={getWeather}
@@ -101,6 +101,8 @@ function App() {
           forecastData={forecastData}
         />
       </div>
+      
+      <footer className="font-bold mt-14">Made By <a className="text-red-500" href="https://github.com/NOTBOOSTER/weather-app">Bhaskar Melkani</a></footer>
     </div>
   );
 }
