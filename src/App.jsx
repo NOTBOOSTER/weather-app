@@ -30,14 +30,18 @@ function App() {
   // get weather api data
 
   const getWeather = async () => {
-    setlastLocation(Location);
     await axios
       .get(
         `https://api.openweathermap.org/data/2.5/weather?q=${Location}&units=metric&appid=${API_KEY}`
       )
       .then((response) => {
-        console.log(response.data);
         setWeather(response.data);
+        console.log(response)
+        if (response.data.cod === "404") {
+          alert("Location not found. Please try again.");
+        } else {
+          setlastLocation(Location);
+        }
       })
       .catch((error) => console.log(error));
   };
